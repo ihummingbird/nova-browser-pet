@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Nova",
+  "version": "0.2.2", // Increment version
+  "description": "A cute pet that sits on your browser pages!",
+  "browser_specific_settings": { // <<< ADD THIS BLOCK
+    "gecko": {
+      "id": "mahdyu1346@live.com", 
+      "strict_min_version": "91.1.0" // Optional: Specify min Firefox version
+    }
+  },
+
+  "icons": {
+    "48": "icons/pet-icon-48.png",
+    "96": "icons/pet-icon-96.png"
+  },
+  "permissions": [
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "animation_data.js", // <<< LOAD THIS FIRST
+        "pet.js"             // <<< THEN LOAD THIS
+      ],
+      "css": ["pet.css"],
+      "run_at": "document_idle" // Optional: can help ensure page is mostly ready
+    }
+  ],
+  "web_accessible_resources": [ // Only sprite sheet and icons needed here now
+    {
+      "resources": [
+        "sprites.png",
+        "icons/pet-icon-48.png",
+        "icons/pet-icon-96.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

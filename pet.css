@@ -1,0 +1,17 @@
+/* pet.css */
+#browser-pet-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px; /* Initial position */
+  z-index: 99999;
+  /* pointer-events: none; /* Uncomment if you don't want clicks on the pet */
+}
+
+#browser-pet-sprite { /* Changed from #browser-pet-element */
+  /* Width and height will be set by JavaScript based on frame size */
+  background-repeat: no-repeat; /* Crucial for sprite sheets */
+  image-rendering: pixelated; /* Optional: good for pixel art for sharp edges */
+  /* image-rendering: -moz-crisp-edges; /* Firefox */
+  /* image-rendering: crisp-edges;   /* General */
+  transform-origin: center; /* Useful if you scale or rotate */
+}
