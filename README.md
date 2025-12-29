@@ -1,6 +1,10 @@
 #  Nova: An Animated Browser Pet
 
+ ![ This is Nova](./Hi Nova.png)
+
 Nova is a tiny, cute, and persistent pet that lives at the bottom of your browser window! It runs, idles, and follows a predictable, synchronized life across all your active tabs, thanks to a clever use of time-based seeded randomness.
+
+
 
 This extension is built purely with HTML, CSS, and JavaScript as a Content Script, ensuring minimal performance impact.
 
